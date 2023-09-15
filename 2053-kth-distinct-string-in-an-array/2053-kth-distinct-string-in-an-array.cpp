@@ -1,17 +1,17 @@
 class Solution {
 public:
     string kthDistinct(vector<string>& arr, int k) {
-        map <string,int> cnt;
+        map <string,int> count;
         for(auto i: arr){
-            cnt[i]++;
+            count[i]++;
         }
-        int c=0;
-        for(auto i : arr){
-            if(cnt[i]==1){
-                c++;
+        int cnt=0;
+        for(auto x : arr){
+            if(count[x]==1){
+                cnt++;
             }
-            if(k==c){
-                return i;
+            if(k==cnt){
+                return x;
             }
         }
             return "";
